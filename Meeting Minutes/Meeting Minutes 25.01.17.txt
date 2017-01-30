@@ -1,0 +1,24 @@
+25/01/17
+
+All members in attendance
+
+Discussed ideas about possible games
+- 2D Game
+- 2 Players play at the same time
+- Screen split in two sections
+- Each player completes puzzles on their side
+- Players can use gravity mechanic
+- Gravity mechanic rotates screen, causes items and players to fall
+
+All Group members have been assigned tasks to conduct research into similar games and other possible 
+physic mechanics
+
+Lewis will create draft of presentation and upload to GitHub so other members can add other information
+
+Daniel will be creating a prototype
+
+Anastazia will be creating concept art for the game
+
+
+
+ 
