@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class TutorialPlayerControl : MonoBehaviour {
-    public bool Up = false;
+    bool Up = false;
     bool Left = false;
     bool Right = false;
     bool Down = false;
+    public bool Finish = false;
     bool OnGround = false;
-    Rigidbody2D RigBody;
+    public Rigidbody2D RigBody;
     float JumpHeight=8;
     float XSpeed=3;
     public GUISkin theSkin;
     string msg ="";
+    public TutorialCameraControl Cam;
 
 
     // Use this for initialization
@@ -39,6 +41,19 @@ public class TutorialPlayerControl : MonoBehaviour {
         {
             transform.position = new Vector2(transform.position.x + (XSpeed * Time.deltaTime) * RigBody.gravityScale, transform.position.y);
         }
+
+        if (Finish)
+        {
+            if (transform.position.x < 0)
+            {
+                Left = true;
+            }
+            else
+            {
+                Right = true;
+            }
+            Finish = false;
+        }
     }
 
     IEnumerator Timer()
@@ -59,7 +74,18 @@ public class TutorialPlayerControl : MonoBehaviour {
         msg = "Jump";
         yield return new WaitForSeconds(1);
         Up = false;
-        msg = "";
+        msg = "Gravity Shift";
+        Up = true;
+        yield return new WaitForSeconds(1);
+        Up = false;
+        Cam.Space = true;
+        yield return new WaitForSeconds(0.4f);
+        Cam.Space = false;
+        yield return new WaitForSeconds(2);
+        msg = "Boulders activate switches";
+        yield return new WaitForSeconds(4);
+        Finish = true;
+        msg = "Touch the door to finish";
 
     }
 
