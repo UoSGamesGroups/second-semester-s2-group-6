@@ -58,7 +58,7 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    private void OnTriggerExit2D(Collider coll)
+    private void OnTriggerExit2D(Collider2D coll)
     {
         if (RigBody.gravityScale == 1)
         {
