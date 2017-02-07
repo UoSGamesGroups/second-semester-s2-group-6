@@ -8,12 +8,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityScript;
 
 public class SwitchController : MonoBehaviour {
 
     #region GameObjects
     public GameObject Door; //Main door object.
     public GameObject Corner; //Empty Game objects that are attached.
+   
     #endregion
 
     #region Vectors
@@ -32,6 +34,7 @@ public class SwitchController : MonoBehaviour {
     public KeyCode Option3;
     public KeyCode Option4;
     public KeyCode Option5;
+
     #endregion
 
     //Maybe
@@ -39,27 +42,43 @@ public class SwitchController : MonoBehaviour {
     public float QuaterionRotationSmoothing = 0.1f;
     private Quaternion targetRotation;
     private Quaternion startingPos;
+    
 
-    //Option4
-    bool hasDoorOpened = false;
-    float DoorStartingPosX;
-    float DoorCurrentPosX;    
-    float FinishDoorPosX;
-    [Range(1f, 25f)]
-    public float FinishDoorPosXInt;
+    public Quaternion Test;
 
+    public DoorController theDoor;
 
+    public bool IsExitSwitchActive = false;
+    
 
-
+    #region[WhatRotationWeWantDropDown]
+    public enum WhatRotaion
+    {
+        RotationFromCorner,
+        RotationFromCenter,
+        Upwards,
+        Left,
+        Right, 
+        Down
+    }
+    public WhatRotaion HowDoorIsOpened;
+    #endregion
     // Use this for initialization
-    void Start () {
-
-        //Make sure we know where the door is at the start of the script.
-		DoorStartingPosX = Door.transform.position.x;
+    void Start () {      
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    
+    void OnMouseDown()
+    {
+        if (gameObject.name == "ExitSwitch")
+        {
+            
+
+        }
+
+    }
+    // Update is called once per frame
+    void Update () {
+        //Exit Door
 
         if (Input.GetKey(Option1))
         {
@@ -83,35 +102,12 @@ public class SwitchController : MonoBehaviour {
             //This is all guess work and google work.
             targetRotation = Quaternion.Euler(0, 0, 90);
             startingPos = this.transform.rotation;
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, smooth * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, QuaterionRotationSmoothing * Time.deltaTime);
 
-        }
-        else if (Input.GetKey(Option4))
-        {            
-            //>>>>>>>>>>>>>>We will want this To be a collision rather than a trigger with Keys.<<<<<<<<<<<<<<<<<
-
-
-            //How much we want the difference between where the door is, to where we want it to be.
-            FinishDoorPosX = DoorStartingPosX + FinishDoorPosXInt;
-
-            //Has the door already been opened
-            if (hasDoorOpened == false)
-            {
-                //While Where the door current is on the X Axis is Less or equal than where we want it to be, Carry on rollling through with a translate each time.
-                while (DoorCurrentPosX <= FinishDoorPosX)
-                {
-                    float translate = 0.01f;
-                    
-                    Door.transform.Translate(translate, 0, 0 * Time.deltaTime / 200);
-                    DoorCurrentPosX = Door.transform.position.x;//Collect the current position for later use.
-
-                }
-                hasDoorOpened = true; //The door has now been opened.
-            }            
-            
-        } else if (Input.GetKey(Option5))
+        }else if (Input.GetKey(Option5))
         {
             //Option 5
+            Door.transform.position = new Vector3(transform.position.x + Mathf.Sin(Test.z), transform.position.y + Mathf.Cos(Test.z), transform.position.z);
         }
 
 
@@ -123,6 +119,30 @@ public class SwitchController : MonoBehaviour {
         // GameObject.Find("").transform.position;
 
         // transform.RotateAround(Vector3.zero,Vector3.right, 20 * Time.deltaTime);
+
+//else if (Input.GetKey(Option4))
+  //      {
+            //>>>>>>>>>>>>>>We will want this To be a collision rather than a trigger with Keys.<<<<<<<<<<<<<<<<<
+            
+
+            ////How much we want the difference between where the door is, to where we want it to be.
+            //FinishDoorPosX = DoorStartingPosX + FinishDoorPosXInt;
+
+            ////Has the door already been opened
+            //if (hasDoorOpened == false)
+            //{
+            //    //While Where the door current is on the X Axis is Less or equal than where we want it to be, Carry on rollling through with a translate each time.
+            //    while (DoorCurrentPosX <= FinishDoorPosX)
+            //    {
+            //        float translate = 0.01f;
+                    
+            //        Door.transform.Translate(translate, 0, 0 * Time.deltaTime / 200);
+            //        DoorCurrentPosX = Door.transform.position.x;//Collect the current position for later use.
+
+            //    }
+            //    hasDoorOpened = true; //The door has now been opened.
+            //}            
+            
         #endregion
     }
 }
