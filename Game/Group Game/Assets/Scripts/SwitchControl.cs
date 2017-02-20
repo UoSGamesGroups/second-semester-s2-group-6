@@ -17,7 +17,7 @@ public class SwitchControl : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="player"|| collision.gameObject.tag == "Object")
+        if (collision.gameObject.tag=="Player"|| collision.gameObject.tag == "Obstacle")
         {
             MyDoor.Active = false;
         }
@@ -25,7 +25,7 @@ public class SwitchControl : MonoBehaviour {
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "player" || collision.gameObject.tag == "Object")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Obstacle")
         {
             MyDoor.Active = true;
         }

@@ -9,7 +9,6 @@ public class DoorControl : MonoBehaviour {
     Vector3 StartPos;
     float StartRotation;
     float Angle;
-    public GameObject Corner;
     public int Multiplier=1;
 
     /*
@@ -55,44 +54,38 @@ public class DoorControl : MonoBehaviour {
 
             case 2:
                 if (Active) {
+                    
                     if (Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) < 5) {
-                        transform.position = new Vector3(transform.position.x + Mathf.Sin(transform.rotation.z), transform.position.y + Mathf.Cos(transform.rotation.z), transform.position.z);
+                        transform.position = new Vector3(transform.position.x + Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y + Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
                 else
                 {
                     if(Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) > 0.1f)
                     {
-                        transform.position = new Vector3(transform.position.x - Mathf.Sin(transform.rotation.z), transform.position.y - Mathf.Cos(transform.rotation.z), transform.position.z);
+                        transform.position = new Vector3(transform.position.x - Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y - Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
-                    break;
+            break;
+
             case 3:
                 if (Active)
                 {
                     if (Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) < 5)
                     {
-                        transform.position = new Vector3(transform.position.x + Mathf.Cos(transform.rotation.z), transform.position.y + Mathf.Sin(transform.rotation.z), transform.position.z);
+                        transform.position = new Vector3(transform.position.x + Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.y + Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
                 else
                 {
                     if (Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) > 0.1f)
                     {
-                        transform.position = new Vector3(transform.position.x - Mathf.Cos(transform.rotation.z), transform.position.y - Mathf.Sin(transform.rotation.z), transform.position.z);
+                        transform.position = new Vector3(transform.position.x - Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.y - Mathf.Sin(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
-
-
-
-                break;
-
-
-
+            break;
         }
-	
 	}
-
 
     float Magnitude(Vector3 input)
     {
