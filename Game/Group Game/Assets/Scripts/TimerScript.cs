@@ -5,8 +5,8 @@ public class TimerScript : MonoBehaviour {
     CameraControl CamScript;
 
     public GUISkin theSkin;
-    bool TimeBool = true;
-    int TimesinceStart=0;
+    public bool TimeBool = true;
+    public int TimeSinceStart=0;
 	// Use this for initialization
 	void Start () {
         CamScript = GetComponent<CameraControl>();
@@ -25,14 +25,14 @@ public class TimerScript : MonoBehaviour {
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(1);
-        TimesinceStart++;
+        TimeSinceStart++;
         TimeBool = true;
     }
 
     private void OnGUI()
     {
         GUI.skin = theSkin;
-        GUI.Label(new Rect(Screen.width*0.48f, Screen.height*(8/9), 30, 40),TimesinceStart.ToString());
+        GUI.Label(new Rect(Screen.width*0.48f, Screen.height*(8/9), 30, 40),TimeSinceStart.ToString());
     }
 
 }

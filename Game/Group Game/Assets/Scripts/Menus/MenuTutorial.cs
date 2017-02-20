@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class MenuTutorial : MonoBehaviour {
+
     public MenuLevels LvlButton;
     public bool Clicked;
     public bool Back;
@@ -50,8 +51,7 @@ public class MenuTutorial : MonoBehaviour {
     IEnumerator StartLevel()
     {
         yield return new WaitForSeconds(2);
-        //start tutorial level
-        Debug.Log("Stating Level");
+        Application.LoadLevel(1);
     }
 
 

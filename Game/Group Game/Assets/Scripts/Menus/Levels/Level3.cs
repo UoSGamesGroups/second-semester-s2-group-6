@@ -45,7 +45,7 @@ public class Level3 : MonoBehaviour {
     IEnumerator StartLevel()
     {
         yield return new WaitForSeconds(2);
-        //start Level
+        Application.LoadLevel(4);
     }
 
     private void OnMouseUpAsButton()
