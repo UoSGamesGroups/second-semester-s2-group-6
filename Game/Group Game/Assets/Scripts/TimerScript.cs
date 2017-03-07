@@ -32,7 +32,7 @@ public class TimerScript : MonoBehaviour {
     private void OnGUI()
     {
         GUI.skin = theSkin;
-        GUI.Label(new Rect(Screen.width*0.48f, Screen.height*(8/9), 30, 40),TimeSinceStart.ToString());
+        GUI.Label(new Rect(Screen.width*0.50f, Screen.height*(8/9), 30, 40),TimeSinceStart.ToString());
     }
 
 }
