@@ -9,10 +9,12 @@ public class CameraControl : MonoBehaviour
     public int DesiredRotation = 0;
     public float SpinLimit = 2;
     public Rigidbody2D Rb;
-    public GameObject[] Shapes;
+    public SwitchWeightStickControl[] Shapes;
     // Use this for initialization
     void Start()
     {
+        Shapes = FindObjectsOfType<SwitchWeightStickControl>();
+        Players = FindObjectsOfType<PlayerControl>();
     }
 
     // Update is called once per frame
