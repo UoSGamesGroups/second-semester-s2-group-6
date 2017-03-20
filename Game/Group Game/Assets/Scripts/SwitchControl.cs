@@ -5,7 +5,8 @@ public class SwitchControl : MonoBehaviour {
 
     public DoorControl MyDoor;
     //MyDoor.active;
-	// Use this for initialization
+    // Use this for initialization
+    bool WeightAttached = false;
 	void Start () {
 	
 	}
@@ -17,7 +18,7 @@ public class SwitchControl : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="Player"|| collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.tag=="Player")
         {
             MyDoor.Active = false;
         }
@@ -25,8 +26,19 @@ public class SwitchControl : MonoBehaviour {
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Obstacle")
-        {
+        if (collision.gameObject.tag == "Obstacle") {
+            if (!WeightAttached) {
+                WeightAttached = true;
+                SwitchWeightStickControl Ball = collision.gameObject.GetComponent<SwitchWeightStickControl>();
+                Ball.Stuck = true;
+                Ball.PlatePos = transform.position;
+                
+            }
+            if(MyDoor.Active!=true)
+                MyDoor.Active = true;
+        }
+
+        else if (collision.gameObject.tag == "Player") {
             MyDoor.Active = true;
         }
     }

@@ -15,57 +15,36 @@ public class PhysicsController : MonoBehaviour {
 
 
 
-    public GameObject obj;
-    public Rigidbody2D rb_;
-    public PhysicsMaterial2D mat;
-    public KeyCode V;
-    
-    #region Transforms
-    public Transform originaldirection;
-    public Transform relecteddirection;
-    private Transform direction;
-    #endregion
-    
-    #region Material Stuff
-    //material stuff
+
+
+
+
+
+    #region Physics Material varibles
+    Rigidbody2D rb_;
     public float Friction;
     public float Bounciness;
     public float Weight;
-    Material Mater;
     PolygonCollider2D thiscol;
-    PhysicMaterial coll;
+    PhysicsMaterial2D PM;
     #endregion
 
-    #region Keycode 
-    public KeyCode addWeight;
-    public KeyCode doubleBounce;
-    #endregion
 
-    public PhysicsMaterial2D PM;
-    public float TEST;
 
     // Use this for initialization
     void Start () {
         //material stuff
-        thiscol = GetComponent<PolygonCollider2D>();
+        thiscol = this.GetComponent<PolygonCollider2D>();
+        //create new physics material
         PM = new PhysicsMaterial2D();
+        //give physics material properties
         PM.friction = Friction;
         PM.bounciness = Bounciness;
+        //give collider this physics material
         thiscol.sharedMaterial = PM;
-        rb_ = obj.GetComponent<Rigidbody2D>();
+        //give wanteed weight
+        rb_ = this.GetComponent<Rigidbody2D>();
         rb_.mass = Weight;
-        
 	}
 	
-    void OnCollisionEnter(Collision collisionInfo)
-    {
-        //Here we want to when ever the object hits any sort of collider, we want it to bounce in the opposite direction, Tried using the addforce and reflect, could not get the direction bit working.
-
-        Vector3 playerpos = this.transform.position;
-        //relecteddirection.position = Vector3.Reflect(originaldirection.position, Vector3.right);
-        
-        //rb_.AddForce(Vector3.Reflect(direction, collisionInfo.contacts[0].normal * 5, ForceMode.Impulse));
-
-
-    }
 }

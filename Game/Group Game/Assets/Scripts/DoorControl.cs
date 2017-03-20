@@ -10,7 +10,8 @@ public class DoorControl : MonoBehaviour {
     float StartRotation;
     float Angle;
     public int Multiplier=1;
-
+    public int Side;
+    public string Name ="";
     /*
      
          1 is rotate from corner
@@ -29,6 +30,12 @@ public class DoorControl : MonoBehaviour {
         StartPos = transform.position;
         StartRotation = transform.rotation.z;
         Angle = transform.rotation.z;
+        if (transform.position.x > 0) {
+            Side = -1;
+        }
+        else {
+            Side = 1;
+        }
 	}
 	
 	// Update is called once per frame
@@ -56,14 +63,14 @@ public class DoorControl : MonoBehaviour {
                 if (Active) {
                     
                     if (Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) < 5) {
-                        transform.position = new Vector3(transform.position.x + Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y + Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
+                        transform.position = new Vector3(transform.position.x + Side * Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y + Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
                 else
                 {
                     if(Magnitude(new Vector2(transform.position.x - StartPos.x, transform.position.y - StartPos.y)) > 0.1f)
                     {
-                        transform.position = new Vector3(transform.position.x - Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y - Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
+                        transform.position = new Vector3(Side* transform.position.x - Mathf.Sin(Mathf.Deg2Rad * -transform.eulerAngles.z), transform.position.y - Mathf.Cos(Mathf.Deg2Rad * transform.eulerAngles.z), transform.position.z);
                     }
                 }
             break;
