@@ -26,30 +26,30 @@ desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 4.553481 ms
+UnloadTime: 2.839308 ms
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.318024 ms
+UnloadTime: 0.227555 ms
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 439.
-Total: 0.229135 ms (FindLiveObjects: 0.030814 ms CreateObjectMapping: 0.020148 ms MarkObjects: 0.150913 ms  DeleteObjects: 0.020938 ms)
+Total: 0.206617 ms (FindLiveObjects: 0.041481 ms CreateObjectMapping: 0.015802 ms MarkObjects: 0.132740 ms  DeleteObjects: 0.014617 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.448000 ms
+UnloadTime: 0.302222 ms
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 333.
-Total: 0.202666 ms (FindLiveObjects: 0.028049 ms CreateObjectMapping: 0.016197 ms MarkObjects: 0.142617 ms  DeleteObjects: 0.014617 ms)
+Total: 0.195950 ms (FindLiveObjects: 0.039901 ms CreateObjectMapping: 0.019358 ms MarkObjects: 0.122469 ms  DeleteObjects: 0.013827 ms)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.276148 ms
+UnloadTime: 0.268246 ms
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 433.
-Total: 0.210172 ms (FindLiveObjects: 0.039111 ms CreateObjectMapping: 0.015407 ms MarkObjects: 0.141827 ms  DeleteObjects: 0.013037 ms)
+Total: 0.202271 ms (FindLiveObjects: 0.033580 ms CreateObjectMapping: 0.014222 ms MarkObjects: 0.143407 ms  DeleteObjects: 0.010666 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.340938 ms
+UnloadTime: 0.384790 ms
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 336.
-Total: 0.221234 ms (FindLiveObjects: 0.022123 ms CreateObjectMapping: 0.014617 ms MarkObjects: 0.169876 ms  DeleteObjects: 0.013827 ms)
+Total: 0.177777 ms (FindLiveObjects: 0.022123 ms CreateObjectMapping: 0.013827 ms MarkObjects: 0.128395 ms  DeleteObjects: 0.013037 ms)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 27d0 -> priority: 1 
+  Thread -> id: 2694 -> priority: 1 
