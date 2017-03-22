@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Level4 : MonoBehaviour {
 
@@ -45,7 +46,7 @@ public class Level4 : MonoBehaviour {
     IEnumerator StartLevel()
     {
         yield return new WaitForSeconds(2);
-        Application.LoadLevel(5);
+        SceneManager.LoadScene(5);
     }
 
     private void OnMouseUpAsButton()

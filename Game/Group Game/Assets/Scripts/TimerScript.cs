@@ -2,14 +2,12 @@
 using System.Collections;
 
 public class TimerScript : MonoBehaviour {
-    CameraControl CamScript;
 
     public GUISkin theSkin;
     public bool TimeBool = true;
     public int TimeSinceStart=0;
 	// Use this for initialization
 	void Start () {
-        CamScript = GetComponent<CameraControl>();
 
     }
 	

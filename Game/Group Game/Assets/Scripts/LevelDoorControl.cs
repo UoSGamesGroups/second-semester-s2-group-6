@@ -1,6 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -21,7 +19,7 @@ public class LevelDoorControl : MonoBehaviour {
             Players[i].enabled = false;
         }
         yield return new WaitForSeconds(3);
-        Application.LoadLevel(0);
+        SceneManager.LoadScene(0);
     }
     private void OnCollisionEnter2D(Collision2D coll)
     {

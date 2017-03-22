@@ -8,7 +8,6 @@ public class DoorControl : MonoBehaviour {
     public bool Active = false;
     Vector3 StartPos;
     float StartRotation;
-    float Angle;
     public int Multiplier=1;
     public int Side;
     public string Name ="";
@@ -22,14 +21,11 @@ public class DoorControl : MonoBehaviour {
          */
 
 
-
-    Rigidbody2D RB;
+        
 	// Use this for initialization
 	void Start () {
-        RB = GetComponent<Rigidbody2D>();
         StartPos = transform.position;
         StartRotation = transform.rotation.z;
-        Angle = transform.rotation.z;
         if (transform.position.x > 0) {
             Side = -1;
         }

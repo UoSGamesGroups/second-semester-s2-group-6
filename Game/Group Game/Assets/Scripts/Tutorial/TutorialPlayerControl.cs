@@ -5,7 +5,7 @@ public class TutorialPlayerControl : MonoBehaviour {
     bool Up = false;
     bool Left = false;
     bool Right = false;
-    bool Down = false;
+
     public bool Finish = false;
     bool OnGround = false;
     public Rigidbody2D RigBody;

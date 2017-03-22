@@ -1,0 +1,55 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 520 (ID=0x1916)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   21.20.16.4550
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.041 seconds
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\DanJ1\Desktop\GitHub\second-semester-s2-group-6\Game\Group Game\BUILD\build_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 4.553481 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.318024 ms
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 439.
+Total: 0.229135 ms (FindLiveObjects: 0.030814 ms CreateObjectMapping: 0.020148 ms MarkObjects: 0.150913 ms  DeleteObjects: 0.020938 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.448000 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 333.
+Total: 0.202666 ms (FindLiveObjects: 0.028049 ms CreateObjectMapping: 0.016197 ms MarkObjects: 0.142617 ms  DeleteObjects: 0.014617 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.276148 ms
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 433.
+Total: 0.210172 ms (FindLiveObjects: 0.039111 ms CreateObjectMapping: 0.015407 ms MarkObjects: 0.141827 ms  DeleteObjects: 0.013037 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.340938 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 336.
+Total: 0.221234 ms (FindLiveObjects: 0.022123 ms CreateObjectMapping: 0.014617 ms MarkObjects: 0.169876 ms  DeleteObjects: 0.013827 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 27d0 -> priority: 1 
