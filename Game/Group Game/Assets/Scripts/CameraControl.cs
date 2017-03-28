@@ -10,11 +10,14 @@ public class CameraControl : MonoBehaviour
     public float SpinLimit = 2;
     public Rigidbody2D Rb;
     public SwitchWeightStickControl[] Shapes;
+    public AudioClip Gravity;
+    private AudioSource source;
     // Use this for initialization
     void Start()
     {
         Shapes = FindObjectsOfType<SwitchWeightStickControl>();
         Players = FindObjectsOfType<PlayerControl>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class CameraControl : MonoBehaviour
         if (Input.GetKey(Space) && Rotating == false)
         {
             Rotating = true;
+            source.PlayOneShot(Gravity, 0.3f);
             if (Players[1].RigBody.gravityScale == 1)
             {
                 DesiredRotation = 180;
