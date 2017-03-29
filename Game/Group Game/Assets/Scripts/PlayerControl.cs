@@ -13,13 +13,10 @@ public class PlayerControl : MonoBehaviour
     public bool Home = false;
     public bool OnGround = false;
     public Rigidbody2D RigBody;
-    public AudioClip jump;
-    private AudioSource source;
     // Use this for initialization
     void Start()
     {
         RigBody = GetComponent<Rigidbody2D>();
-        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,9 +25,7 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown(Up) && OnGround == true)
         {
             OnGround = false;
-            source.PlayOneShot(jump, 0.2f);
             RigBody.velocity = new Vector2(RigBody.velocity.x, JumpHeight * RigBody.gravityScale);
-            
         }
 
 
